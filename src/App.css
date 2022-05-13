@@ -1,0 +1,33 @@
+.commendationFormTextField {
+  margin-top: 10px !important;
+}
+
+body, html {
+padding: 0;
+margin: 0;
+}
+
+.loginButton {
+margin-left: auto;
+}
+
+.overflowstuff {
+  height: 200px;
+  overflow: scroll;
+}
+
+.commendation {
+display: inline-block;
+white-space: pre-line;
+/* width: 500px; */
+height: 150px;
+flex-grow: 1;
+cursor: pointer;
+}
+
+.commendationClicked {
+display: inline-block;
+white-space: pre-line;
+flex-grow: 1;
+/* width: 500px; */
+}
