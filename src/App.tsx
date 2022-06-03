@@ -18,6 +18,7 @@ import EmployeeContext from './providers/EmployeeContext';
 import Header from './components/themed/Header';
 import WhatIf from './views/WhatIf';
 import TeamContext from './providers/TeamContext';
+import UserContext from './providers/UserContext';
 
 function App() {
 
@@ -34,42 +35,42 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <EmployeeContext>
-        <Router>
-          <Switch>
-            <TeamContext>
-              <Route path="/" exact>
-                <Protected>
-                  <Home profileImage={profileImageUrl} getProfileImage={getProfileImage} getEmployeeProfileImage={getEmployeeProfileImage} isAdmin={isAdmin} />
-                </Protected>
+      <UserContext>
+        <EmployeeContext>
+          <Router>
+            <Switch>
+              <TeamContext>
+                <Route path="/" exact>
+                  <Protected>
+                    <Home />
+                  </Protected>
+                </Route>
+                <Route path="/kiosk" exact>
+                  <Protected>
+                    <Kiosk />
+                  </Protected>
+                </Route>
+                <Route path="/commendations" exact>
+                  <Protected>
+                    <Header />
+                    <Commendations />
+                  </Protected>
+                </Route>
+                <Route path="/admin" exact>
+                  <AdminProtected>
+                    <Header />
+                    <Admin />
+                  </AdminProtected>
+                </Route>
+              </TeamContext>
+              <Route path="/whatif" exact>
+                <Header />
+                <WhatIf />
               </Route>
-              <Route path="/kiosk" exact>
-                <Protected>
-                  <Kiosk profileImage={profileImageUrl} getProfileImage={getProfileImage} getEmployeeProfileImage={getEmployeeProfileImage} isAdmin={isAdmin} />
-                </Protected>
-              </Route>
-              <Route path="/commendations" exact>
-                <Protected>
-                  <Header profileImage={profileImageUrl} isAdmin={isAdmin} />
-                  <Commendations getEmployeeProfileImage={getEmployeeProfileImage} />
-                </Protected>
-              </Route>
-            </TeamContext>
-            <Route path="/whatif" exact>
-              <Header />
-              <WhatIf />
-            </Route>
-            <TeamContext>
-              <Route path="/admin" exact>
-                <AdminProtected>
-                  <Header profileImage={profileImageUrl} isAdmin={isAdmin} />
-                  <Admin getEmployeeProfileImage={getEmployeeProfileImage} />
-                </AdminProtected>
-              </Route>
-            </TeamContext>
-          </Switch>
-        </Router>
-      </EmployeeContext>
+            </Switch>
+          </Router>
+        </EmployeeContext>
+      </UserContext>
     </ThemeProvider>
   )
 }
