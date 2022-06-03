@@ -3,6 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@fontsource/raleway': ^4.5.0
   '@material-ui/core': ^4.12.4
+  '@material-ui/icons': ^4.11.3
+  '@material-ui/lab': 4.0.0-alpha.61
   '@testing-library/dom': ^8.13.0
   '@testing-library/jest-dom': ^5.11.4
   '@testing-library/react': ^11.1.0
@@ -28,6 +30,8 @@ specifiers:
 dependencies:
   '@fontsource/raleway': 4.5.8
   '@material-ui/core': 4.12.4_k2mvpji5i2ojml6m4ftklg47pa
+  '@material-ui/icons': 4.11.3_4srqehlfeixbheo2rceiozhx4y
+  '@material-ui/lab': 4.0.0-alpha.61_4srqehlfeixbheo2rceiozhx4y
   '@testing-library/dom': 8.13.0
   '@testing-library/jest-dom': 5.16.4
   '@testing-library/react': 11.2.7_sfoxds7t5ydpegc3knd667wn6m
@@ -1880,6 +1884,48 @@ packages:
       react-dom: 17.0.2_react@17.0.2
       react-is: 17.0.2
       react-transition-group: 4.4.2_sfoxds7t5ydpegc3knd667wn6m
+    dev: false
+
+  /@material-ui/icons/4.11.3_4srqehlfeixbheo2rceiozhx4y:
+    resolution: {integrity: sha512-IKHlyx6LDh8n19vzwH5RtHIOHl9Tu90aAAxcbWME6kp4dmvODM3UvOHJeMIDzUbd4muuJKHmlNoBN+mDY4XkBA==}
+    engines: {node: '>=8.0.0'}
+    peerDependencies:
+      '@material-ui/core': ^4.0.0
+      '@types/react': ^16.8.6 || ^17.0.0
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.17.9
+      '@material-ui/core': 4.12.4_k2mvpji5i2ojml6m4ftklg47pa
+      '@types/react': 17.0.45
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /@material-ui/lab/4.0.0-alpha.61_4srqehlfeixbheo2rceiozhx4y:
+    resolution: {integrity: sha512-rSzm+XKiNUjKegj8bzt5+pygZeckNLOr+IjykH8sYdVk7dE9y2ZuUSofiMV2bJk3qU+JHwexmw+q0RyNZB9ugg==}
+    engines: {node: '>=8.0.0'}
+    peerDependencies:
+      '@material-ui/core': ^4.12.1
+      '@types/react': ^16.8.6 || ^17.0.0
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.17.9
+      '@material-ui/core': 4.12.4_k2mvpji5i2ojml6m4ftklg47pa
+      '@material-ui/utils': 4.11.3_sfoxds7t5ydpegc3knd667wn6m
+      '@types/react': 17.0.45
+      clsx: 1.1.1
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-is: 17.0.2
     dev: false
 
   /@material-ui/styles/4.11.5_k2mvpji5i2ojml6m4ftklg47pa:
